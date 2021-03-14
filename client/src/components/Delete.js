@@ -1,7 +1,6 @@
 import React from "react";
 //Delete Modal Functional Component
 export default function Delete(props) {
-  let cancel = false;
 
   return (
     // JSX HTML

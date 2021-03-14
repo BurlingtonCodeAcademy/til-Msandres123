@@ -54,7 +54,7 @@ app.get("/api", async (req, res) => {
 });
 
 //Displays specific entries that match the search criteria (currently not working, will display desired results in terminal or on localhost://5000, but not on front end)
-app.get("/search/", express.urlencoded(), async (req, res) => {
+app.get(`/searchs/`, express.urlencoded(), async (req, res) => {
   let setSearch = req.query.searchType;
   let setValue = req.query.searchValue;
   const searchCursor = await JournalModel.find({ [setSearch]: setValue });

@@ -4,13 +4,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 //Facts page component, displaying all the entries on one page
 export default function Facts(props) {
+  //Set results from the fetch to be displayed on the page
   const [results, setResults] = useState([]);
-  const [targetedSearch, setTargetedSearch] = useState("not-selected");
-
-  //Sets the search key based upon selection in dropdown
-  function changeSelection(evt) {
-    setTargetedSearch(evt.target.value);
-  }
 
   //Fetches all the entry from the til MongoDB
   useEffect(() => {
@@ -20,17 +15,7 @@ export default function Facts(props) {
         .then((entryList) => {
           setResults(entryList);
         });
-    }
-  });
-  //Not working at the moment, currently search results only display in backend terminal and on localhost://5000
-  useEffect(() => {
-    if (targetedSearch !== "not-selected") {
-      fetch("/search/")
-        .then((res) => res.json())
-        .then((entryList) => {
-          setResults(entryList);
-        });
-    }
+    } 
   });
   //Used to put objects fetched from backend into an array which allows them to be properly displayed on Facts page
   let entryArr = [];
@@ -46,11 +31,10 @@ export default function Facts(props) {
       <h1>Browser Entries</h1>
       {/* Form used to define search category (dropdown lets the user select the ) */}
       <form method="GET" action="/search/">
-        <select name="searchType" onChange={changeSelection}>
+        <select name="searchType" >
           <option value="not-selected">Search By Category</option>
           <option value="author">Author</option>
           <option value="title">Title</option>
-          <option value="tags">tags</option>
         </select>
         <input type="text" name="searchValue" />
         <input type="submit" value="search" />
