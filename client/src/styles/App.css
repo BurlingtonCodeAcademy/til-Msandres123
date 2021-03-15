@@ -1,0 +1,88 @@
+/* Body Style */
+body{
+  margin:0,
+
+}
+
+body a{
+  text-decoration: none;
+  color: black
+}
+
+/* Styling for the Nav-Bar */
+#navBar-container{
+display: flex;
+flex-direction: row;
+justify-content: space-around; 
+height: 5vh; 
+background-color: red;
+padding-top: 2.5vh;
+}
+/* Styling for Nav-Bar Links */
+#navBar-container a{
+  text-decoration: none;
+  color: black;
+}
+/* Styling for the App Header */
+#til-header{
+  text-align: center;
+}
+/* Styling for the Home Page */
+#home-style{
+  margin-left: 10vw;
+}
+/* Styling for the Entry Form */
+#entry-form-container{
+  display: flex;
+  flex-direction: column;
+
+}
+/* Styling for the Facts Page Header */
+#facts-style h1{
+  text-align: center;
+}
+/* Styling for the Search Bar */
+#facts-style form{
+  text-align: center;
+}
+/* Styling for entry header */
+#entry-header{
+  text-align: center;
+}
+/* Styling for entry container */
+#entry-container{
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+/* Styling for tags */
+#tag-container{
+  display: flex;
+  flex-direction: row;
+}
+
+#tags-left{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+#tags-right{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2vw;
+ 
+}
+
+/* Styling for cancel and delete buttons in delete modal */
+#delete-modal-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+#delete-modal-button-style{
+  padding: 5px;
+  background-color: red;
+  border-radius: 15%;
+} 
