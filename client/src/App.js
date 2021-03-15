@@ -26,6 +26,7 @@ function App(props) {
         <Route exact path={"/facts"} component={Facts} />
         {/* Route that directs user to the specific entry page */}
         <Route path={"/facts/:id"} component={EntryPage} />
+        {/* Route that directs user to the search results page */}
         <Route path={"/search/"} component={SearchResults} /> 
       </Switch>
     </div>
